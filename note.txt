@@ -1,0 +1,17 @@
+check header for 
+- X-GitHub-Event: The name of the event that triggered the delivery
+
+
+pull request
+
+- open: 
+	properties: "action": "opened"
+		   "pull_request.state": open
+		   "pull_request.merged_at": None
+   		    pull_request.head.ref: //name of the from branch
+		    pull_request.base.ref: //name of the to branch 
+		   
+- close (check for if merged):
+	properties: "action": "closed"
+		    "pull_request.state": close
+		    "pull_request.merged_at: DateTime
