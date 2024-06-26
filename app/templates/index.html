@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="15">
+    <title>Live Monitoring Action Repo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Live Monitoring Action Repo</h1>
+        </header>
+        <div class="message">
+            <!-- <p><strong>xyz</strong> pushed changes to <strong>dev</strong> from <strong>dev</strong> at <strong>26th June 17:50 UTC</strong></p> -->
+            {{message | safe}}
+        </div>
+        <div class="last-updated">
+            {{last_updated | safe}}
+        </div>
+    </div>
+</body>
+</html>
